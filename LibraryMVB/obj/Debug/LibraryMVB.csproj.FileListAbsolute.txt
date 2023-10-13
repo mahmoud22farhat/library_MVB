@@ -63,3 +63,6 @@ D:\LibraryMVB\LibraryMVB\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.
 D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.csproj.CopyComplete
 D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_Bookplaces.resources
 D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_category.resources
+D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_dar_elNasher.resources
+D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_Authors.resources
+D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_country.resources

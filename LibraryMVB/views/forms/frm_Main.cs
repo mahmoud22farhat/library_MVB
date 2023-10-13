@@ -23,7 +23,8 @@ namespace LibraryMVB.views.forms
         }
            private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
                 {
-           
+            frm_Authors frm = new frm_Authors();
+            frm.ShowDialog();
         }
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -31,6 +32,16 @@ namespace LibraryMVB.views.forms
             frm.ShowDialog();
         }
 
-      
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_dar_elNasher frm = new frm_dar_elNasher();
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_country frm = new frm_country();
+            frm.ShowDialog();
+        }
     }
 }
