@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace LibraryMVB.modles
 {
-    class booksdatamodel
+   public class CategoryModel
     {
-
-
-
-
-
+        public int ID { get; set; }
+        public string  Catname { get; set; }
     }
 }
