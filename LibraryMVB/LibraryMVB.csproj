@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logic\presenter\categorypresenter.cs" />
+    <Compile Include="logic\services\CategoryServices.cs" />
     <Compile Include="logic\services\DBHelper.cs" />
     <Compile Include="modles\CategoryModel.cs" />
     <Compile Include="Program.cs" />
@@ -133,8 +135,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="logic\presenter\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

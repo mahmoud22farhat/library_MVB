@@ -9,8 +9,9 @@ namespace LibraryMVB.logic.services
 {
     public class DBHelper
     {
-        //دالة الاتصال الرئيسية
+       
         public static SqlCommand command;
+        //دالة الاتصال الرئيسية
         static private SqlConnection getconnictionstring()
 
         {
@@ -23,15 +24,21 @@ namespace LibraryMVB.logic.services
             return new SqlConnection(builder.ConnectionString);
 
         } 
-        public static bool excutdata(string spName)
+       
+        //هذه الدالة لعمل للاضافةوالتعديل والتحديث والمسح ومسح الجميع من قاعدة البيانات
+        public static bool excutdata(string spName,Action method)
         {
-
+ //اسم دالة الاكشن هي ميثود
+        //الاكشن هي البراميتر التي تحمل الداله التي بداخلها الدوال
             using (SqlConnection Connection = getconnictionstring())
             {
                 try
                 {
                     command = new SqlCommand(spName, Connection);
                     command.CommandType = CommandType.StoredProcedure;
+
+                    //لادخال البراميترالتي يحتوي علي الدوال
+                    method.Invoke();
 
                     Connection.Open();
                     command.ExecuteNonQuery();
@@ -53,5 +60,6 @@ namespace LibraryMVB.logic.services
 
                 return false;
         }
+        
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace LibraryMVB.views.Interfaace
 {
- public interface Icategory
+ public interface ICategory
     {
+        int ID { get; set; }
 
-}
+        string Catname { get; set; }
+    }
 }
