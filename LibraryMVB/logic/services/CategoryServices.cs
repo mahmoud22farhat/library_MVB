@@ -23,7 +23,7 @@ namespace LibraryMVB.logic.services
         }
 
 
-        //this method to add delete parameter into stored procedure
+        //this method to delete parameter into stored procedure
         public static bool categorydelete(int id)
         {
 
@@ -34,6 +34,19 @@ namespace LibraryMVB.logic.services
         {
             commmand.Parameters.Add("@id", SqlDbType.Int).Value = id;
          
+        }
+
+        //this method to delete all parameter into stored procedure
+        public static bool categorydeleteall()
+        {
+
+            return DBHelper.excutdata("categoryDeleteAll", () => categoryparmaterdeleteall());
+
+        }
+        private static void categoryparmaterdeleteall()
+        {
+           
+
         }
 
 
@@ -50,6 +63,28 @@ namespace LibraryMVB.logic.services
             commmand.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
         }
 
+        //this method to get all data to show in DGV
+        public static DataTable getalldata()
+        {
+            /* DataTable tbl = new DataTable();
+            tbl= DBHelper.getData("countrygetall", () => { });
+             return tbl;*/
+            //هذا اختصار للدالة السابقة
+            return DBHelper.getData("categorygetall", () => { });
 
+
+        }
+        //this method to get last Row show in DGV
+        public static DataTable getlastrow()
+        {
+            return DBHelper.getData("categorygetlastRow", () => { });
+
+        }
+        //this method to get Max ID in table
+        public static DataTable getMaxID()
+        {
+            return DBHelper.getData("categoryMaxID", () => { });
+
+        }
     }
 }

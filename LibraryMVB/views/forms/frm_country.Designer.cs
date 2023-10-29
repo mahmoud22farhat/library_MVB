@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_country));
             this.Dgv_search = new System.Windows.Forms.DataGridView();
             this.btn_deleteall = new DevExpress.XtraEditors.SimpleButton();
@@ -62,14 +62,14 @@
             this.Dgv_search.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Dgv_search.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.Dgv_search.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Droid Arabic Kufi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_search.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Droid Arabic Kufi", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_search.DefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_search.Location = new System.Drawing.Point(7, 274);
             this.Dgv_search.Name = "Dgv_search";
             this.Dgv_search.ReadOnly = true;
@@ -91,6 +91,7 @@
             this.btn_deleteall.Size = new System.Drawing.Size(125, 41);
             this.btn_deleteall.TabIndex = 4;
             this.btn_deleteall.Text = "مسح الكل";
+            this.btn_deleteall.Click += new System.EventHandler(this.btn_deleteall_Click);
             // 
             // btn_new
             // 
@@ -103,6 +104,7 @@
             this.btn_new.Size = new System.Drawing.Size(105, 41);
             this.btn_new.TabIndex = 3;
             this.btn_new.Text = "جديد";
+            this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
             // 
             // btn_delete
             // 
@@ -115,6 +117,7 @@
             this.btn_delete.Size = new System.Drawing.Size(105, 41);
             this.btn_delete.TabIndex = 2;
             this.btn_delete.Text = "حذف";
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_save
             // 
@@ -127,6 +130,7 @@
             this.btn_save.Size = new System.Drawing.Size(105, 41);
             this.btn_save.TabIndex = 1;
             this.btn_save.Text = "حفظ";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // groupBox2
             // 
@@ -155,6 +159,7 @@
             this.btn_add.Size = new System.Drawing.Size(105, 41);
             this.btn_add.TabIndex = 0;
             this.btn_add.Text = "اضافة";
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_next
             // 
@@ -166,6 +171,7 @@
             this.btn_next.Name = "btn_next";
             this.btn_next.Size = new System.Drawing.Size(51, 31);
             this.btn_next.TabIndex = 3;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
             // btn_priv
             // 
@@ -177,6 +183,7 @@
             this.btn_priv.Name = "btn_priv";
             this.btn_priv.Size = new System.Drawing.Size(51, 31);
             this.btn_priv.TabIndex = 2;
+            this.btn_priv.Click += new System.EventHandler(this.btn_priv_Click);
             // 
             // btn_first
             // 
@@ -188,6 +195,7 @@
             this.btn_first.Name = "btn_first";
             this.btn_first.Size = new System.Drawing.Size(51, 31);
             this.btn_first.TabIndex = 1;
+            this.btn_first.Click += new System.EventHandler(this.btn_first_Click);
             // 
             // btn_last
             // 
@@ -199,6 +207,7 @@
             this.btn_last.Name = "btn_last";
             this.btn_last.Size = new System.Drawing.Size(51, 31);
             this.btn_last.TabIndex = 0;
+            this.btn_last.Click += new System.EventHandler(this.btn_last_Click);
             // 
             // groupBox3
             // 
@@ -262,6 +271,7 @@
             this.txt_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ID.Location = new System.Drawing.Point(260, 24);
             this.txt_ID.Name = "txt_ID";
+            this.txt_ID.ReadOnly = true;
             this.txt_ID.Size = new System.Drawing.Size(138, 36);
             this.txt_ID.TabIndex = 1;
             this.txt_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -279,13 +289,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.LookAndFeel.UseWindowsXPTheme = true;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "frm_country";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "الدول";
+            this.Load += new System.EventHandler(this.frm_country_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_search)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

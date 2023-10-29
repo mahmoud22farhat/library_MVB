@@ -51,10 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logic\countrypresenter.cs" />
     <Compile Include="logic\presenter\categorypresenter.cs" />
+    <Compile Include="logic\presenter\countrypresenter.cs" />
     <Compile Include="logic\services\CategoryServices.cs" />
+    <Compile Include="logic\services\countryservice.cs" />
     <Compile Include="logic\services\DBHelper.cs" />
     <Compile Include="modles\CategoryModel.cs" />
+    <Compile Include="modles\CountryModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\forms\frm_Authors.cs">
@@ -94,6 +98,7 @@
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="views\Interfaace\Icategory.cs" />
+    <Compile Include="views\Interfaace\Icountry.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

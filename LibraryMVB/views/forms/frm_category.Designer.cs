@@ -90,6 +90,7 @@
             this.txt_ID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ID.Location = new System.Drawing.Point(260, 24);
             this.txt_ID.Name = "txt_ID";
+            this.txt_ID.ReadOnly = true;
             this.txt_ID.Size = new System.Drawing.Size(138, 32);
             this.txt_ID.TabIndex = 1;
             this.txt_ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -129,6 +130,7 @@
             this.btn_next.Name = "btn_next";
             this.btn_next.Size = new System.Drawing.Size(51, 31);
             this.btn_next.TabIndex = 3;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
             // btn_priv
             // 
@@ -140,6 +142,7 @@
             this.btn_priv.Name = "btn_priv";
             this.btn_priv.Size = new System.Drawing.Size(51, 31);
             this.btn_priv.TabIndex = 2;
+            this.btn_priv.Click += new System.EventHandler(this.btn_priv_Click);
             // 
             // btn_first
             // 
@@ -151,6 +154,7 @@
             this.btn_first.Name = "btn_first";
             this.btn_first.Size = new System.Drawing.Size(51, 31);
             this.btn_first.TabIndex = 1;
+            this.btn_first.Click += new System.EventHandler(this.btn_first_Click);
             // 
             // btn_last
             // 
@@ -162,6 +166,7 @@
             this.btn_last.Name = "btn_last";
             this.btn_last.Size = new System.Drawing.Size(51, 31);
             this.btn_last.TabIndex = 0;
+            this.btn_last.Click += new System.EventHandler(this.btn_last_Click);
             // 
             // groupBox2
             // 
@@ -190,6 +195,7 @@
             this.btn_deleteall.Size = new System.Drawing.Size(125, 41);
             this.btn_deleteall.TabIndex = 4;
             this.btn_deleteall.Text = "مسح الكل";
+            this.btn_deleteall.Click += new System.EventHandler(this.btn_deleteall_Click);
             // 
             // btn_new
             // 
@@ -202,6 +208,7 @@
             this.btn_new.Size = new System.Drawing.Size(105, 41);
             this.btn_new.TabIndex = 3;
             this.btn_new.Text = "جديد";
+            this.btn_new.Click += new System.EventHandler(this.btn_new_Click);
             // 
             // btn_delete
             // 
@@ -214,6 +221,7 @@
             this.btn_delete.Size = new System.Drawing.Size(105, 41);
             this.btn_delete.TabIndex = 2;
             this.btn_delete.Text = "حذف";
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_save
             // 
@@ -226,6 +234,7 @@
             this.btn_save.Size = new System.Drawing.Size(105, 41);
             this.btn_save.TabIndex = 1;
             this.btn_save.Text = "حفظ";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_add
             // 

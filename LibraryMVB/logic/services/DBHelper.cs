@@ -60,6 +60,54 @@ namespace LibraryMVB.logic.services
 
                 return false;
         }
-        
+        //this method to get any data in table or sp in database in all program
+        public static DataTable getData (string spName, Action method)
+        {
+            //اسم دالة الاكشن هي ميثود
+            //الاكشن هي البراميتر التي تحمل الداله التي بداخلها الدوال
+            DataTable tbl = new DataTable();
+            SqlDataAdapter da;
+            using (SqlConnection Connection = getconnictionstring())
+            {
+                
+                try
+                {
+                    command = new SqlCommand(spName, Connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    //لادخال البراميترالتي يحتوي علي الدوال
+                    method.Invoke();
+                    Connection.Open();
+
+                    //وضع الاتصال المنفصل
+                   da = new SqlDataAdapter(command);
+                    da.Fill(tbl);
+                    //dispose = close
+                    da.Dispose();
+                    Connection.Close();
+                    
+                }
+                catch (Exception ex)
+                {
+
+                    Connection.Close();
+                   
+                    Console.WriteLine(ex.Message);
+                  
+                }
+                finally
+                {
+                    Connection.Close();
+                    
+                }
+
+            }
+
+            return tbl;
+          
+        }
+
+    
+
     }
 }
