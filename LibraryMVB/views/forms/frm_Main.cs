@@ -43,5 +43,11 @@ namespace LibraryMVB.views.forms
             frm_country frm = new frm_country();
             frm.ShowDialog();
         }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_BooksData frm = new frm_BooksData();
+            frm.ShowDialog();
+        }
     }
 }

@@ -66,3 +66,4 @@ D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_category.resources
 D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_dar_elNasher.resources
 D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_Authors.resources
 D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_country.resources
+D:\LibraryMVB\LibraryMVB\obj\Debug\LibraryMVB.views.forms.frm_BooksData.resources
