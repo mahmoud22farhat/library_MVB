@@ -18,6 +18,7 @@ namespace LibraryMVB.views.Interfaace
         string Authorvaluemember { get; set; }
         object dataGridView { get; set; }
         object cbxcountry { get; set; }
+
         object btn_add { get; set; }
         object btn_new { get; set; }
         object btn_save { get; set; }

@@ -34,10 +34,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.ViewVariantsModule.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ForEachSMOEnumerator, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,12 +60,19 @@
     <Compile Include="logic\presenter\AuthorsPresenter.cs" />
     <Compile Include="logic\presenter\BookDataPresenter.cs" />
     <Compile Include="logic\presenter\BookPlacePresenter.cs" />
+    <Compile Include="logic\presenter\BooksSearchPresenter.cs" />
+    <Compile Include="logic\presenter\BorrowersPresenter.cs" />
+    <Compile Include="logic\presenter\BorrowPresenter.cs" />
     <Compile Include="logic\presenter\categorypresenter.cs" />
     <Compile Include="logic\presenter\countrypresenter.cs" />
     <Compile Include="logic\presenter\DarNashrPresenter.cs" />
     <Compile Include="logic\services\AuthorServices.cs" />
+    <Compile Include="logic\services\BackupSevuces.cs" />
     <Compile Include="logic\services\BookDataSevices.cs" />
     <Compile Include="logic\services\BookPlaceServices.cs" />
+    <Compile Include="logic\services\BooksSearchServices.cs" />
+    <Compile Include="logic\services\BorrowerService.cs" />
+    <Compile Include="logic\services\BorrowServices.cs" />
     <Compile Include="logic\services\CategoryServices.cs" />
     <Compile Include="logic\services\countryservice.cs" />
     <Compile Include="logic\services\DarNashrService.cs" />
@@ -68,6 +80,9 @@
     <Compile Include="modles\AuthorsModel.cs" />
     <Compile Include="modles\BookDataModel.cs" />
     <Compile Include="modles\BookPlaceModel.cs" />
+    <Compile Include="modles\BooksSearchModel.cs" />
+    <Compile Include="modles\BorrowersModel.cs" />
+    <Compile Include="modles\BorrowModel.cs" />
     <Compile Include="modles\CategoryModel.cs" />
     <Compile Include="modles\CountryModel.cs" />
     <Compile Include="modles\DarNashrModel.cs" />
@@ -90,6 +105,24 @@
     </Compile>
     <Compile Include="views\forms\frm_BooksData.Designer.cs">
       <DependentUpon>frm_BooksData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\forms\frm_BooksSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\forms\frm_BooksSearch.Designer.cs">
+      <DependentUpon>frm_BooksSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\forms\frm_Borroewars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\forms\frm_Borroewars.Designer.cs">
+      <DependentUpon>frm_Borroewars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\forms\frm_Borrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\forms\frm_Borrow.Designer.cs">
+      <DependentUpon>frm_Borrow.cs</DependentUpon>
     </Compile>
     <Compile Include="views\forms\frm_category.cs">
       <SubType>Form</SubType>
@@ -115,9 +148,18 @@
     <Compile Include="views\forms\frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\forms\splash_screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\forms\splash_screen.Designer.cs">
+      <DependentUpon>splash_screen.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\Interfaace\IAuthors.cs" />
     <Compile Include="views\Interfaace\IBookPlace.cs" />
     <Compile Include="views\Interfaace\IBooksData.cs" />
+    <Compile Include="views\Interfaace\IBooksSearch.cs" />
+    <Compile Include="views\Interfaace\IBorrow.cs" />
+    <Compile Include="views\Interfaace\IBorrowers.cs" />
     <Compile Include="views\Interfaace\Icategory.cs" />
     <Compile Include="views\Interfaace\Icountry.cs" />
     <Compile Include="views\Interfaace\IdarNashr.cs" />
@@ -130,6 +172,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="views\forms\frm_Authors.resx">
       <DependentUpon>frm_Authors.cs</DependentUpon>
@@ -139,6 +182,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\forms\frm_BooksData.resx">
       <DependentUpon>frm_BooksData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\forms\frm_BooksSearch.resx">
+      <DependentUpon>frm_BooksSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\forms\frm_Borroewars.resx">
+      <DependentUpon>frm_Borroewars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\forms\frm_Borrow.resx">
+      <DependentUpon>frm_Borrow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\forms\frm_category.resx">
       <DependentUpon>frm_category.cs</DependentUpon>
@@ -151,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\forms\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\forms\splash_screen.resx">
+      <DependentUpon>splash_screen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +220,71 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\8d1c9e9055a1eae2f9dab4739498ddff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8d1c9e9055a1eae2f9dab4739498ddff1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8d1c9e9055a1ef9dab4739498ddff.JPG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1693553109565.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman_652051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knowledge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8d1c9e9055a1eae2f9dab4739498ddff2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

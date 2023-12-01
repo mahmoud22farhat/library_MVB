@@ -96,17 +96,18 @@ namespace LibraryMVB.views.forms
         }
         private void frm_BooksData_Load(object sender, EventArgs e)
         {
-            bookdatapresenter.fillcbxDarNashr();
-            bookdatapresenter.fillcbxCountry();
-            bookdatapresenter.fillcbxCategory();
-            bookdatapresenter.fillcbxBookplaceData();
-            bookdatapresenter.fillcbxAuthorData();
-            bookdatapresenter.fillcbxBooksData();
+            
+                bookdatapresenter.fillcbxDarNashr();
+                bookdatapresenter.fillcbxCountry();
+                bookdatapresenter.fillcbxCategory();
+                bookdatapresenter.fillcbxBookplaceData();
+                bookdatapresenter.fillcbxAuthorData();
+                bookdatapresenter.fillcbxBooksData();
 
-            bookdatapresenter.AutoNumber();
+                bookdatapresenter.AutoNumber();
+           
+
         }
-
-      
 
         private void btn_new_Click(object sender, EventArgs e)
         {

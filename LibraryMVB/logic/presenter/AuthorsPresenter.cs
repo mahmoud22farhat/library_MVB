@@ -60,7 +60,8 @@ namespace LibraryMVB.logic.presenter
 
         public void AutoNumber()
         {
-            string val = Convert.ToString(AuthorServices.getauthormaxid().Rows[0][0]);
+           
+                string val = Convert.ToString(AuthorServices.getauthormaxid().Rows[0][0]);
             if(val==null||val=="")
             {
                 iAuthors.ID = 1;

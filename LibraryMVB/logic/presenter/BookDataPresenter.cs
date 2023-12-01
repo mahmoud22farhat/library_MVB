@@ -26,16 +26,16 @@ namespace LibraryMVB.logic.presenter
             bookdataModel.ID = ibookdata.ID;
             bookdataModel.BookName = ibookdata.BookName;
             bookdataModel.CatID = ibookdata.CatID;
-            bookdataModel.AuthorID       = ibookdata.AuthorID      ;
+            bookdataModel.AuthorID= ibookdata.AuthorID;
             bookdataModel.CountryID = ibookdata.CountryID;
             bookdataModel.DarID = ibookdata.DarID;
-            bookdataModel.SupCat   = ibookdata.SupCat      ;
+            bookdataModel.SupCat= ibookdata.SupCat;
             bookdataModel.Date = ibookdata.Date;
-            bookdataModel.PageNumper       = ibookdata.PageNumper      ;
-            bookdataModel. PlaceID      = ibookdata. PlaceID     ;
-            bookdataModel.    Bookstatu   = ibookdata.Bookstatu      ;
-            bookdataModel.    BookPrice   = ibookdata.    BookPrice  ;
-            bookdataModel.  Notes     = ibookdata. Notes     ;
+            bookdataModel.PageNumper= ibookdata.PageNumper;
+            bookdataModel. PlaceID= ibookdata. PlaceID;
+            bookdataModel.Bookstatu= ibookdata.Bookstatu;
+            bookdataModel.BookPrice= ibookdata.BookPrice;
+            bookdataModel.Notes= ibookdata. Notes;
            
         }
         public void fillcbxDarNashr()
@@ -112,7 +112,8 @@ namespace LibraryMVB.logic.presenter
             ibookdata.BookPrice = 1;
             ibookdata.PageNumper = 1;
             ibookdata.Notes = "";
-
+            ibookdata.SupCat = "";
+            ibookdata.Bookstatu="";
 
             ibookdata.btn_save = false;
             ibookdata.btn_delete = false;

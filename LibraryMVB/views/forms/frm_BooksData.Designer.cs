@@ -431,7 +431,7 @@
             // 
             this.btn_update.Appearance.Font = new System.Drawing.Font("Droid Arabic Kufi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.Appearance.Options.UseFont = true;
-            this.btn_update.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.ImageOptions.Image")));
+            this.btn_update.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.ImageOptions.Image")));
             this.btn_update.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightTop;
             this.btn_update.Location = new System.Drawing.Point(269, 31);
             this.btn_update.Name = "btn_update";
@@ -556,7 +556,8 @@
             // frm_BooksData
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(878, 540);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);

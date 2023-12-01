@@ -15,11 +15,11 @@ namespace LibraryMVB.logic.services
         public static bool Bookdatainsert(int id, string Book_name, int Cat_ID, int Author_ID, int countryid, int Dar_ID, string supcat, string date, int PagesNumber, int Place_ID, string Book_Status, decimal Book_prices, string Notes)
         {
 
-            return DBHelper.excutdata("BookdataInsert", () => Bookdataparmaterinsert( id,  Book_name,  Cat_ID,  Author_ID,  countryid,  Dar_ID,  supcat,  date,  PagesNumber,  Place_ID,  Book_Status,  Book_prices,  Notes, DBHelper.command));
+            return DBHelper.excutdata("BookdataInsert", () => Bookdataparmaterinsert(id, Book_name, Cat_ID, Author_ID, countryid, Dar_ID, supcat, date, PagesNumber, Place_ID, Book_Status, Book_prices, Notes, DBHelper.command));
 
         }
         //this method to add insert parameter into stored procedure
-        private static void Bookdataparmaterinsert(int id, string Book_name,int Cat_ID,int Author_ID, int countryid ,int Dar_ID, string supcat, string date,int PagesNumber,int Place_ID, string Book_Status,decimal Book_prices,string Notes, SqlCommand commmand)
+        private static void Bookdataparmaterinsert(int id, string Book_name, int Cat_ID, int Author_ID, int countryid, int Dar_ID, string supcat, string date, int PagesNumber, int Place_ID, string Book_Status, decimal Book_prices, string Notes, SqlCommand commmand)
         {
             commmand.Parameters.Add("@id", SqlDbType.Int).Value = id;
             commmand.Parameters.Add("@Book_name", SqlDbType.NVarChar).Value = Book_name;
@@ -34,8 +34,10 @@ namespace LibraryMVB.logic.services
             commmand.Parameters.Add("@Book_Status", SqlDbType.NVarChar).Value = Book_Status;
             commmand.Parameters.Add("@Book_prices", SqlDbType.Real).Value = Book_prices;
             commmand.Parameters.Add("@Notes", SqlDbType.NVarChar).Value = Notes;
-           
+
         }
+
+
         //this method to add update Book data table in DB
 
         public static bool BookdataUpdate(int id, string Book_name, int Cat_ID, int Author_ID, int countryid, int Dar_ID, string supcat, string date, int PagesNumber, int Place_ID, string Book_Status, decimal Book_prices, string Notes)

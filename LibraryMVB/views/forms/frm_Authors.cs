@@ -63,8 +63,10 @@ namespace LibraryMVB.views.forms
 
         private void frm_Authors_Load(object sender, EventArgs e)
         {
-            authorsPresenter.fillcbx();
-            authorsPresenter.AutoNumber();
+           
+                authorsPresenter.fillcbx();
+                authorsPresenter.AutoNumber();
+                
         }
 
         private void btn_first_Click(object sender, EventArgs e)

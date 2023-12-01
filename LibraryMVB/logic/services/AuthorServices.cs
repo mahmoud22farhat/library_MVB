@@ -102,5 +102,6 @@ namespace LibraryMVB.logic.services
             return DBHelper.getData("AuthorsgetlastRow", () => { });
 
         }
+       
     }
 }
